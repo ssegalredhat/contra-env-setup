@@ -251,13 +251,13 @@ parameters:
 - description: Git source URI for Jenkins S2I
   name: REPO_URL
   required: true
-  value: https://github.com/CentOS-PaaS-SIG/contra-env-infra
+  value: https://github.com/ssegalredhat/jenkins-csb
 - description: Git branch/tag reference
   name: REPO_REF
   value: master
 - description: Path within Git project to build; empty for root project directory.
   name: CONTEXT_DIR
-  value: jenkins
+  value: master/s2i
 - name: JENKINS_SERVICE_NAME
   displayName: Jenkins Service Name
   description: The name of the OpenShift Service exposed for the Jenkins container.
@@ -287,7 +287,7 @@ parameters:
 - name: LOAD_SEED_JOB
   displayName: Load seed job
   description: Whether to load a dsl seed job
-  value: 'true'
+  value: 'false'
 - name: DSL_JOB_REPO
   displayName: DSL job repo
   description: The repository of dsl jobs
